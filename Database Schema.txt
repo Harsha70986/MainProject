@@ -1,0 +1,79 @@
++---------------+
+| Tables_in_hms |
++---------------+
+| adminlogin    |
+| doctor        |
+| invoice       |
+| login         |
+| patient       |
++---------------+
+
+
+ adminlogin :
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| emailid  | varchar(255) | NO   | PRI | NULL    |       |
+| password | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
+
+doctor:
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| did            | int          | NO   | PRI | NULL    | auto_increment |
+| address        | varchar(255) | YES  |     | NULL    |                |
+| dage           | int          | NO   |     | NULL    |                |
+| dgender        | varchar(255) | YES  |     | NULL    |                |
+| dname          | varchar(255) | YES  |     | NULL    |                |
+| dstatus        | varchar(255) | YES  |     | NULL    |                |
+| emailid        | varchar(255) | YES  |     | NULL    |                |
+| phno           | varchar(255) | YES  |     | NULL    |                |
+| specialization | varchar(255) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+
+
+invoice :
++----------------+--------------+------+-----+---------+----------------+
+| Field          | Type         | Null | Key | Default | Extra          |
++----------------+--------------+------+-----+---------+----------------+
+| id             | int          | NO   | PRI | NULL    | auto_increment |
+| admitdate      | varchar(255) | YES  |     | NULL    |                |
+| disease        | varchar(255) | YES  |     | NULL    |                |
+| doctorfee      | varchar(255) | YES  |     | NULL    |                |
+| medicinecost   | varchar(255) | YES  |     | NULL    |                |
+| othercharge    | varchar(255) | YES  |     | NULL    |                |
+| patientaddress | varchar(255) | YES  |     | NULL    |                |
+| patientmobile  | varchar(255) | YES  |     | NULL    |                |
+| patientname    | varchar(255) | YES  |     | NULL    |                |
+| releasedate    | varchar(255) | YES  |     | NULL    |                |
+| roomcharge     | varchar(255) | YES  |     | NULL    |                |
++----------------+--------------+------+-----+---------+----------------+
+
+
+login:
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| emailid  | varchar(255) | NO   | PRI | NULL    |       |
+| password | varchar(255) | YES  |     | NULL    |       |
+| role     | varchar(255) | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+
+
+patient:
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| pid      | int          | NO   | PRI | NULL    | auto_increment |
+| dpid     | int          | YES  | MUL | NULL    |                |
+| emailid  | varchar(255) | YES  |     | NULL    |                |
+| mobile   | varchar(255) | YES  |     | NULL    |                |
+| paddress | varchar(255) | YES  |     | NULL    |                |
+| page     | int          | NO   |     | NULL    |                |
+| pgender  | varchar(255) | YES  |     | NULL    |                |
+| pname    | varchar(255) | YES  |     | NULL    |                |
+| pstatus  | varchar(255) | YES  |     | NULL    |                |
+| symptoms | varchar(255) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
